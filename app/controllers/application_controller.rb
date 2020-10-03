@@ -4,9 +4,12 @@ class ApplicationController < ActionController::Base
 
     def set_current_user
         if logged_in?
-          current_user = @current_user
+            current_user = @current_user
         else
-          redirect_to login_path
+            redirect_to login_path
+            session[:user_id] = nil
+            @current_user = nil
         end
     end
+
 end

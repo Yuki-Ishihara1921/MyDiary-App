@@ -1,4 +1,5 @@
 class DiariesController < ApplicationController
+  before_action :set_current_user
   before_action :set_diary, only: [:show, :edit, :update]
   def index
     diaries = Diary.all

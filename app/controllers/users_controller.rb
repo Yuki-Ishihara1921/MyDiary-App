@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    before_action :set_current_user
 
     def index
         @user = User.find(current_user.id)
