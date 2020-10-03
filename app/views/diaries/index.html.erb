@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<h1>MyDiary</h1>
+<table>
+    <tbody>
+        <% @diaries.each do |diary| %>
+            <tr>
+                <td><%= diary.start_time.strftime("%Y-%m-%d %H:%M") %></td>
+                <td><%= diary.title %></td>
+                <td><%= link_to 'Show', diary %></td>
+                <td><%= link_to 'Edit', edit_diary_path(diary.id) %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<%= link_to '日記を作る', new_diary_path %>
