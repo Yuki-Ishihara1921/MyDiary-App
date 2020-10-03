@@ -11,12 +11,6 @@
   </head>
 
   <body>
-    <%= link_to 'TOP', root_path %>
-    <% if logged_in? %>
-      <%= link_to 'ログアウト', logout_path, method: :delete %>
-    <% else %>
-      <%= link_to 'ログイン', login_path %>
-    <% end %>
     <%= yield %>
   </body>
 </html>

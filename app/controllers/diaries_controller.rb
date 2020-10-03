@@ -1,8 +1,9 @@
 class DiariesController < ApplicationController
   before_action :set_current_user
-  before_action :set_diary, only: [:show, :edit, :update]
+  before_action :set_diary, only: [:show, :edit, :update, :destroy]
   def index
     diaries = Diary.all
+    @user = User.find(current_user.id)
   end
 
   def show
@@ -34,6 +35,13 @@ class DiariesController < ApplicationController
       else
         format.html {render :edit}
       end
+    end
+  end
+
+  def destroy
+    @diary.destroy
+    respond_to do |format|
+      format.html {redirect_to root_path, notice: '日記を削除しました'}
     end
   end
 
