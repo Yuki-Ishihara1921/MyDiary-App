@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :set_current_user
+    before_action :set_current_user, only: [:index]
 
     def index
         @user = User.find(current_user.id)
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             log_in @user
-            redirect_to @user
+            redirect_to root_path
         else
             render 'new'
         end
