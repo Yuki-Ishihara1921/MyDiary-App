@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
 <h1><%= @diary.start_time.strftime("%Y-%m-%d") %></h1>
 <h1><%= @diary.title %></h1>
 <p><%= @diary.content %></p>
+<%= link_to '編集する', edit_diary_path(@diary.id) %>

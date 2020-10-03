@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_03_003016) do
+ActiveRecord::Schema.define(version: 2020_10_03_023716) do
 
   create_table "diaries", force: :cascade do |t|
     t.datetime "start_time"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2020_10_03_003016) do
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_diaries_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -28,4 +30,5 @@ ActiveRecord::Schema.define(version: 2020_10_03_003016) do
     t.string "remember_digest"
   end
 
+  add_foreign_key "diaries", "users"
 end

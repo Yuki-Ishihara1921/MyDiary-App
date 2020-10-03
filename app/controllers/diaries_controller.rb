@@ -1,8 +1,7 @@
 class DiariesController < ApplicationController
-  before_action :set_current_user
   before_action :set_diary, only: [:show, :edit, :update]
   def index
-    @diaries = Diary.all
+    diaries = Diary.all
   end
 
   def show
@@ -14,6 +13,7 @@ class DiariesController < ApplicationController
 
   def create
     @diary = Diary.new(diary_params)
+    @diary.user_id = current_user.id
     respond_to do |format|
       if @diary.save
         format.html {redirect_to @diary, notice: '日記ができました'}
@@ -42,14 +42,7 @@ class DiariesController < ApplicationController
   end
 
   def diary_params
-    params.require(:diary).permit(:start_time, :title, :content)
+    params.require(:diary).permit(:start_time, :title, :content, :user_id)
   end
 
-  def set_current_user
-    if logged_in?
-      current_user = @current_user
-    else
-      redirect_to login_path
-    end
-  end
 end

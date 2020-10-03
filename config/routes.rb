@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'sessions/new'
-  root to: 'diaries#index'
+  root to: 'users#index'
   resources :diaries
   resources :users
   get '/signup', to: 'users#new'
