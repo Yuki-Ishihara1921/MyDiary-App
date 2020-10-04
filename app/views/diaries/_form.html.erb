@@ -1,19 +1,20 @@
-<div class="form">
+<div class="forms">
     <%= form_with(model: @diary, local: true) do |form| %>
-        <div class="form-date">
-            <span>日付</span>
-            <%= form.date_select :start_time, use_month_numbers: true %>
+        <div class="row">
+            <div class="form date col-sm-6">
+                <p>日付</p>
+                <%= form.date_field :start_time %>
+            </div>
+            <div class="form title col-sm-6">
+                <p>タイトル</p>
+                <%= form.text_field :title %>
+            </div>
         </div>
-        <div class="form-title">
-            <span>タイトル</span>
-            <%= form.text_field :title %>
-        </div>
-        <div class="form-content">
-            <span>本文</span>
+        <div class="form content">
+            <p>本文</p>
             <%= form.rich_text_area :content %>
         </div>
-        <div class="form-submit">
-            <%= form.submit '更新' %>
-        </div>
+        <%= form.submit '完了', class: 'btn btn-primary', data: { confirm: 'この内容で日記を作成します'} %>
+        <%= link_to '戻る', :back, class: 'btn btn-info', data: { confirm: 'ページを移動してよろしいですか？'} %>
     <% end %>
 </div>

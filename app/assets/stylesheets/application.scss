@@ -14,11 +14,31 @@
  *= require_self
  *= require simple_calendar
  */
+.page-form {
+    height: 100vh;
+    padding: 10px;
+    background: rgba(0, 0, 0, .33);
+    .form-flame {
+        width: 350px;
+        margin: 25% auto;
+        padding: 25px;
+        text-align: center;
+        background: floralwhite;
+        border: 1px solid;
+        .form {
+            margin-bottom: 10px;
+        }
+    }
+}
 
-.header {
-    display: flex;
-    background: whitesmoke;
-    border-bottom: 1px solid #555;
+.logo {
+    color: #0000AA;
+    font-size: 50px;
+    font-family: serif;
+    font-weight: bold;
+    :hover {
+        text-decoration: none;
+    }
 }
 
 .calendar-heading {

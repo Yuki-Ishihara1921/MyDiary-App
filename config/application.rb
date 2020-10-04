@@ -11,6 +11,10 @@ module MyDiary
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
     config.beginning_of_week = :sunday
+    config.time_zone = 'Tokyo'
+    # i18n適用
+    config.active_record.default_timezone = :local
+    config.i18n.default_locale = :ja
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

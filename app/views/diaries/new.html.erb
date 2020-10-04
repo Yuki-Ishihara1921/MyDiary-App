@@ -1,4 +1,5 @@
 <%= render 'header' %>
-<h1>New Diary</h1>
-<h2><%= link_to '戻る', root_path %></h2>
-<%= render 'form', diary: @diary %>
+<div class="form-flame">
+    <h2>新しい日記</h2>
+    <%= render 'form', diary: @diary %>
+</div>

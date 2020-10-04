@@ -1,7 +1,35 @@
 // Place all the styles related to the diaries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
+.header {
+    display: flex;
+    padding-left: 20px;
+    background: whitesmoke;
+    border-bottom: 1px solid #555;
+    .header-user {
+        margin-left: auto;
+        padding: 0 20px;
+        background: ghostwhite;
+        border-left: 1px solid;
+        text-align: center;
+        p {
+            margin: 0;
+        }
+    }
+}
+.form-flame {
+    h2 {
+        text-align: center;
+    }
+    .forms {
+        p {
+            margin: 0;
+        }
+        .row {
+            margin: 0;
+        }
+    }
+}
 .footer {
     button {
         a {

@@ -1,20 +1,19 @@
-<div class="signupPage">
-    <h1>ユーザー登録</h1>
+<div class="page-form">
+    <div class="form-flame">
+        <span class="logo">MyDiary</span>
 
-    <div class="col-md-offset-3">
-        <%= form_for(@user, url: signup_path ) do |f| %>
-            <%= f.label :name %>
-            <%= f.text_field :name %>
-            <br>
-            <%= f.label :password %>
-            <%= f.password_field :password %>
-            <br>
-            <%= f.label :password_confirmation %>
-            <%= f.password_field :password_confirmation %>
-            <br>
-            <%= f.submit "OK" %>
-        <% end %>
+        <p><%= notice %></p>
+        <div class="row">
+            <div class="col-md-3 col-md-offset-3">
+                <%= form_for(@user, url: signup_path ) do |f| %>
+                    <%= f.text_field :name, class: 'form form-control', placeholder: 'ユーザー名' %>
+                    <%= f.password_field :password, class: 'form form-control', placeholder: 'パスワード' %>
+                    <%= f.password_field :password_confirmation, class: 'form form-control', placeholder: 'パスワード再入力' %>
+                    <%= f.submit 'ユーザー登録', class: 'form btn btn-primary' %>
+                <% end %>
+            </div>
+        </div>
+
+        <%= link_to 'ログインに戻る', login_path %>
     </div>
-
-    <%= link_to 'ログインに戻る', login_path %>
 </div>
