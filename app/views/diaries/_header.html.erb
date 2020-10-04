@@ -1,5 +1,7 @@
-<% if @user %>
-    <p><%= @user.name %>さん</p>
-    <h1><%= link_to 'MyDiary', root_path %></h1>
-    <%= link_to 'ログアウト', logout_path, method: :delete %>
-<% end %>
+<div class="header">
+    <% if @user %>
+        <h1><%= link_to 'MyDiary', root_path %></h1>
+        <p><%= @user.name %>さん</p>
+        <%= link_to 'ログアウト', logout_path, method: :delete %>
+    <% end %>
+</div>

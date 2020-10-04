@@ -14,3 +14,17 @@
  *= require_self
  *= require simple_calendar
  */
+
+.header {
+    border-bottom: 1px solid #555;
+    display: flex;
+}
+
+.calendar-heading {
+    text-align: center;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+}

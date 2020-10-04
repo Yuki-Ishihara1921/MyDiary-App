@@ -1,12 +1,16 @@
 <%= render 'header' %>
 
-<%= month_calendar events: @user.diaries do |date, diaries| %>
-    <%= date.day %>
-    <% diaries.each do |diary| %>
-        <div>
-            <%= link_to diary.title, diary %>
-        </div>
+<div class="main">
+    <%= month_calendar events: @user.diaries do |date, diaries| %>
+        <%= date.day %>
+        <% diaries.each do |diary| %>
+            <div>
+                <%= link_to diary.title, diary %>
+            </div>
+        <% end %>
     <% end %>
-<% end %>
+</div>
 
-<%= link_to '日記を作る', new_diary_path %>
+<div class="footer">
+    <%= link_to '日記を作る', new_diary_path %>
+</div>

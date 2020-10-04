@@ -1,3 +1,4 @@
 <%= render 'header' %>
-<h1>Edit Diary</h1>
+<h1>日記編集</h1>
+<h2><%= link_to '戻る', @diary %></h2>
 <%= render 'form', diary: @diary %>

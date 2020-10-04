@@ -3,20 +3,20 @@
 <p><%= notice %></p>
 
 <div class="col-md-6 col-md-offset-3">
-    <%= form_for(:session, url: login_path) do |f| %>
+    <%= form_for(:session, url: login_path) do |form| %>
 
-        <%= f.label :name %>
-        <%= f.text_field :name, class: 'form-control' %>
-
-        <%= f.label :password %>
-        <%= f.password_field :password, class: 'form-control' %>
-
-        <%= f.label :remember_me do %>
-            <%= f.check_box :remember_me %>
+        <%= form.label :name %>
+        <%= form.text_field :name, class: 'form-control' %>
+        <br>
+        <%= form.label :password %>
+        <%= form.password_field :password, class: 'form-control' %>
+        <br>
+        <%= form.label :remember_me do %>
+            <%= form.check_box :remember_me %>
             <span>Remember_me on this.computer</span>
         <% end %>
-
-        <%= f.submit "Log in", class: "btn btn-primary" %>
+        <br>
+        <%= form.submit "Log in", class: "btn btn-primary" %>
     <% end %>
 
     <p>New user? <%= link_to "Sign up now!", signup_path %></p>

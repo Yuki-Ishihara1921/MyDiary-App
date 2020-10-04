@@ -1,8 +1,17 @@
 <%= render 'header' %>
 
 <p id="notice"><%= notice %></p>
-<h1><%= @diary.start_time.strftime("%Y-%m-%d") %></h1>
-<h1><%= @diary.title %></h1>
-<p><%= @diary.content %></p>
-<%= link_to '再編集する', edit_diary_path(@diary.id) %>
-<%= link_to '削除する', @diary, method: :delete, data: { confirm: 'この日記を削除しますか？' } %>
+<div class="date">
+    <h1><%= @diary.start_time.strftime("%Y") %></h1>
+    <h1><%= @diary.start_time.strftime("%m-%d") %></h1>
+</div>
+<div class="title">
+    <h1><%= @diary.title %></h1>
+</div>
+<div class="content">
+    <p><%= @diary.content %></p>
+</div>
+<div class="edit-delete">
+    <%= link_to '再編集する', edit_diary_path(@diary.id) %>
+    <%= link_to '削除する', @diary, method: :delete, data: { confirm: 'この日記を削除しますか？' } %>
+</div>

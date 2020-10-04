@@ -1,0 +1,39 @@
+.simple-calendar {
+    padding-top: 30px;
+    border: 1px solid black;
+
+    .table {
+        margin: 0;
+    }
+    .day {}
+  
+    .wday-0 {
+        background: mistyrose;
+    }
+    .wday-1 {}
+    .wday-2 {}
+    .wday-3 {}
+    .wday-4 {}
+    .wday-5 {}
+    .wday-6 {
+        background: lightcyan;
+    }
+  
+    .today {
+        border: 3px solid coral;
+    }
+    .past {}
+    .future {}
+  
+    .start-date {}
+  
+    .prev-month {}
+    .next-month { }
+    .current-month {}
+  
+    .has-events {
+        a {
+            color: black;
+        }
+    }
+}
