@@ -2,7 +2,7 @@
     <%= form_with(model: @diary, local: true) do |form| %>
         <div class="form-date">
             <span>日付</span>
-            <%= form.date_select :start_time %>
+            <%= form.date_select :start_time, use_month_numbers: true %>
         </div>
         <div class="form-title">
             <span>タイトル</span>

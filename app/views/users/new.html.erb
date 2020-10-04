@@ -1,18 +1,20 @@
-<h1>ユーザー登録</h1>
+<div class="signupPage">
+    <h1>ユーザー登録</h1>
 
-<div class="col-md-6 col-md-offset-3">
-    <%= form_for(@user, url: signup_path ) do |f| %>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
-        <br>
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-        <br>
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation %>
-        <br>
-        <%= f.submit "OK" %>
-    <% end %>
+    <div class="col-md-offset-3">
+        <%= form_for(@user, url: signup_path ) do |f| %>
+            <%= f.label :name %>
+            <%= f.text_field :name %>
+            <br>
+            <%= f.label :password %>
+            <%= f.password_field :password %>
+            <br>
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation %>
+            <br>
+            <%= f.submit "OK" %>
+        <% end %>
+    </div>
+
+    <%= link_to 'ログインに戻る', login_path %>
 </div>
-
-<%= link_to 'ログインに戻る', login_path %>

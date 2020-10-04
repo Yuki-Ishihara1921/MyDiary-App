@@ -1,14 +1,41 @@
 .simple-calendar {
-    padding-top: 30px;
-    border: 1px solid black;
-
+    .calendar-heading {
+        margin: 10px 20px;
+        position: relative;
+        text-align: unset !important;
+        .calendar-title {
+            text-align: left;
+            .month-ja-name {
+                font-size: 30px;
+            }
+        }
+        .calendar-shift {
+            position: absolute;
+            right: 20px;
+            bottom: 0;
+            a {
+                padding: 0 10px;
+                border: 1px solid #555;
+                border-radius: 10px;
+                font-size: 20px;
+            }
+            a:hover {
+                color: #fff;
+                background: blue;
+                text-decoration: none;
+            }
+        }
+    }
     .table {
         margin: 0;
+        th {
+            text-align: center;
+        }
     }
     .day {}
   
     .wday-0 {
-        background: mistyrose;
+        background: #FFF0F5 !important;
     }
     .wday-1 {}
     .wday-2 {}
@@ -16,7 +43,7 @@
     .wday-4 {}
     .wday-5 {}
     .wday-6 {
-        background: lightcyan;
+        background: #F0FFFF !important;
     }
   
     .today {
@@ -27,13 +54,22 @@
   
     .start-date {}
   
-    .prev-month {}
-    .next-month { }
+    .prev-month {
+        color: lightgray;
+        background: unset !important;
+    }
+    .next-month {
+        color: lightgray;
+        background: unset !important;
+    }
     .current-month {}
   
     .has-events {
         a {
-            color: black;
+            color: #555;
+        }
+        a:hover {
+            color: blue;
         }
     }
 }

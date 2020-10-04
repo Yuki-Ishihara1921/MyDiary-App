@@ -1,23 +1,25 @@
-<h1>Log in</h1>
+<div class="loginPage">
+    <h1>ログイン</h1>
 
-<p><%= notice %></p>
+    <p><%= notice %></p>
 
-<div class="col-md-6 col-md-offset-3">
-    <%= form_for(:session, url: login_path) do |form| %>
+    <div class="col-md-offset-3">
+        <%= form_for(:session, url: login_path) do |form| %>
 
-        <%= form.label :name %>
-        <%= form.text_field :name, class: 'form-control' %>
-        <br>
-        <%= form.label :password %>
-        <%= form.password_field :password, class: 'form-control' %>
-        <br>
-        <%= form.label :remember_me do %>
-            <%= form.check_box :remember_me %>
-            <span>Remember_me on this.computer</span>
+            <%= form.label :name %>
+            <%= form.text_field :name, class: 'form-control' %>
+            <br>
+            <%= form.label :password %>
+            <%= form.password_field :password, class: 'form-control' %>
+            <br>
+            <%= form.label :remember_me do %>
+                <%= form.check_box :remember_me %>
+                <span>ログイン状態を保持</span>
+            <% end %>
+            <br>
+            <%= form.submit "ログイン", class: "btn btn-primary" %>
         <% end %>
-        <br>
-        <%= form.submit "Log in", class: "btn btn-primary" %>
-    <% end %>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+        <p><%= link_to "ユーザー作成", signup_path %></p>
+    </div>
 </div>

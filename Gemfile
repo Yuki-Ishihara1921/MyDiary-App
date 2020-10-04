@@ -58,5 +58,3 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'simple_calendar'
-
-gem 'rails-i18n'
