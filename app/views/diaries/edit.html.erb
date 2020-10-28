@@ -1,4 +1,7 @@
-<%= render 'header' %>
-<h1>日記編集</h1>
-<h2><%= link_to '戻る', @diary %></h2>
-<%= render 'form', diary: @diary %>
+<div class="editPage">
+    <%= render 'header' %>
+    <div class="edit-form form-contents">
+        <h3>日記編集</h3>
+        <%= render 'form', diary: @diary %>
+    </div>
+</div>

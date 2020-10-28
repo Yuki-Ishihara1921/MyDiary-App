@@ -1,5 +1,13 @@
 ---
 ja:
+  activerecord:
+    models:
+      diary: 日記
+    attributes:
+      diary:
+        start_time: 日付
+        title: タイトル
+        user: ユーザー
   date:
     order:
       - :year

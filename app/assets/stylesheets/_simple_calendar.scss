@@ -2,7 +2,6 @@
     .calendar-heading {
         margin: 10px 20px;
         position: relative;
-        text-align: unset !important;
         .calendar-title {
             text-align: left;
             .month-ja-name {
@@ -47,7 +46,7 @@
     }
   
     .today {
-        border: 3px solid coral;
+        border: 2px solid coral;
     }
     .past {}
     .future {}

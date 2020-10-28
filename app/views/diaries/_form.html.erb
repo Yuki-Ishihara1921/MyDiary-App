@@ -1,20 +1,31 @@
-<div class="forms">
+<div class="form-group">
+    <div class="error-message">
+        <% if @diary.errors.any? %>              
+            <ul>
+                <% @diary.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        <% end %>
+    </div>
     <%= form_with(model: @diary, local: true) do |form| %>
         <div class="row">
-            <div class="form date col-sm-6">
-                <p>日付</p>
-                <%= form.date_field :start_time %>
+            <div class="form date col-6 col-sm-4">
+                <h6>| 日付 |</h6>
+                <%= form.date_field :start_time, class: 'form-control' %>
             </div>
-            <div class="form title col-sm-6">
-                <p>タイトル</p>
-                <%= form.text_field :title %>
+            <div class="form title col-sm-8">
+                <h6>| タイトル |</h6>
+                <%= form.text_field :title, class: 'form-control' %>
             </div>
         </div>
         <div class="form content">
-            <p>本文</p>
-            <%= form.rich_text_area :content %>
+            <h6>| 本文 |</h6>
+            <%= form.rich_text_area :content, class: 'form-control' %>
         </div>
-        <%= form.submit '完了', class: 'btn btn-primary', data: { confirm: 'この内容で日記を作成します'} %>
-        <%= link_to '戻る', :back, class: 'btn btn-info', data: { confirm: 'ページを移動してよろしいですか？'} %>
+        <div class="form-buttons">
+            <%= form.submit '完了', class: 'btn btn-success', data: { confirm: 'この内容で日記を作成します'} %>
+            <%= link_to '戻る', diary, class: 'btn btn-primary', data: { confirm: 'ページを移動してよろしいですか？'} %>
+        </div>
     <% end %>
 </div>

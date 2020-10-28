@@ -1,6 +1,11 @@
-// Place all the styles related to the diaries controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@charset "UTF-8";
+/* ---------- common ---------- */
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+}
 .header {
     display: flex;
     padding-left: 20px;
@@ -17,26 +22,112 @@
         }
     }
 }
-.form-flame {
-    h2 {
+.notice {
+    p {
+        margin: 0;
+        background: pink;
+    }
+}
+/* ------------------------------ */
+
+/* ---------- Index page ---------- */
+.footer {
+    padding-top: 30px;
+    text-align: center;
+}
+/* ------------------------------ */
+
+/* ---------- Show page ---------- */
+.showPage {
+    height: 100%;
+    background: mintcream;
+    .show-contents {
+        margin: 0 30px;
+        padding: 30px;
+        background: aliceblue;
+        .show-header {
+            display: flex;
+            padding: 20px 0;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            .date {
+                padding: 5px;
+                text-align: center;
+                background: turquoise;
+                color: #fff;
+            }
+            .title {
+                margin: auto;
+                color: darkblue;
+            }
+        }
+    }
+    .show-buttons {
+        margin: 20px;
         text-align: center;
+        .btn {
+            width: 100px;
+            margin: 0 10px;
+        }
+    }
+}
+/* ------------------------------ */
+
+/* ---------- New/Edit page ---------- */
+.newPage {
+    background: honeydew;
+}
+.editPage {
+    background: azure;
+}
+/* ------------------------------ */
+
+/* ---------- Form (New/Edit) ---------- */
+.form-contents {
+    h3 {
+        margin: 0;
+        padding: 5px;
+        text-align: center;
+        background: aquamarine;
+        font-weight: bold;
+        letter-spacing: 5px;
     }
     .forms {
         p {
             margin: 0;
         }
+    }
+    .form-group {
+        margin: 0;
+        padding: 0 10px;
+        .error-message {
+            color: red;
+            font-weight: bold;
+        }
         .row {
-            margin: 0;
+            width: 100%;
+        }
+        .form {
+            margin: 10px 0;
+        }
+    }
+    .form-buttons {
+        padding-bottom: 12px;
+        text-align: center;
+        .btn {
+            width: 100px;
+            margin: 0 10px;
         }
     }
 }
-.footer {
-    button {
-        a {
-            color: #fff;
-        }
-        a:hover {
-            text-decoration: none;
-        }
+.new-form {
+    h3 {
+        background: aquamarine;
     }
 }
+.edit-form {
+    h3 {
+        background: aqua;
+    }
+}
+/* ------------------------------ */

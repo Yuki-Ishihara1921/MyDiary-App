@@ -1,5 +1,7 @@
 <%= render 'header' %>
-
+<div class="notice">
+    <p><%= notice %><p>
+</div>
 <div class="main">
     <%= month_calendar events: @user.diaries do |date, diaries| %>
         <%= date.day %>
@@ -10,9 +12,6 @@
         <% end %>
     <% end %>
 </div>
-
 <div class="footer">
-    <button class="btn btn-info">
-        <span><%= link_to '日記を作る', new_diary_path %><span>
-    </button>
+    <%= link_to '日記を作る', new_diary_path, class: 'btn btn-info' %>
 </div>

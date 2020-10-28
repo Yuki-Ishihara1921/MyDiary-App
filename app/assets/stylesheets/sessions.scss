@@ -1,3 +1,28 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.auth-flame {
+    height: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, .33);
+    .auth-forms {
+        width: 350px;
+        margin: 100px auto;
+        padding: 25px;
+        text-align: center;
+        background: floralwhite;
+        .form {
+            margin-bottom: 10px;
+        }
+    }
+}
+.logo {
+    color: #0000AA;
+    font-size: 50px;
+    font-family: serif;
+    font-weight: bold;
+    :hover {
+        text-decoration: none;
+    }
+}

@@ -1,5 +1,7 @@
-<%= render 'header' %>
-<div class="form-flame">
-    <h2>新しい日記</h2>
-    <%= render 'form', diary: @diary %>
+<div class="newPage">
+    <%= render 'header' %>
+    <div class="new-form form-contents">
+        <h3>新規作成</h3>
+        <%= render 'form', diary: @diary %>
+    </div>
 </div>
