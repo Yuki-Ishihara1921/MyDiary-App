@@ -17,7 +17,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             log_in @user
-            redirect_to root_path
+            redirect_to root_path, notice: 'My Diary へようこそ！'
         else
             render 'new'
         end
