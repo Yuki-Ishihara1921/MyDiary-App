@@ -1,41 +1,9 @@
 @charset "UTF-8";
-/* ---------- common ---------- */
-html {
-    height: 100%;
-}
-body {
-    height: 100%;
-}
-.header {
-    display: flex;
-    padding-left: 20px;
-    background: whitesmoke;
-    border-bottom: 1px solid #555;
-    .header-user {
-        margin-left: auto;
-        padding: 0 20px;
-        background: ghostwhite;
-        border-left: 1px solid;
-        text-align: center;
-        p {
-            margin: 0;
-        }
-    }
-}
-.notice {
-    p {
-        margin: 0;
-        text-align: center;
-        background: pink;
-    }
-}
+
 /* ------------------------------ */
 
 /* ---------- Index page ---------- */
-.footer {
-    padding-top: 15px;
-    text-align: center;
-}
+
 /* ------------------------------ */
 
 /* ---------- Show page ---------- */

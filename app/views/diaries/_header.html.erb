@@ -1,9 +1,9 @@
-<div class="header">
-    <span class="logo"><%= link_to 'MyDiary', root_path %></span>
+<header>
+    <span class="app-logo"><%= link_to 'MyDiary', root_path %></span>
     <% if @user %>
-        <div class="header-user">
-            <h2 class="user-name"><%= @user.name %></h2>
-            <p class="user-logout"><%= link_to 'ログアウト', logout_path, method: :delete %></p>
+        <div class="ml-auto px-3 py-0 border-left border-dark bg-light text-center">
+            <h2><%= @user.name %></h2>
+            <p class="m-0"><%= link_to 'ログアウト', logout_path, method: :delete %></p>
         </div>
     <% end %>
-</div>
+</header>
