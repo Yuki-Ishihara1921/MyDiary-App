@@ -1,23 +1,23 @@
-<div class="showPage">
+<div class="showPage__block">
     <%= render 'header' %>
     <%= render 'notice' %>
-    <div class="show-contents">
-        <div class="show-header">
-            <div class="date">
-                <h5><%= @diary.start_time.try(:strftime, "%Y") %></h5>
-                <h4><%= @diary.start_time.try(:strftime, "%m / %d") %></h4>
+    <main>
+        <div class="show__contents m-4 p-4">
+            <div class="s__contents-title">
+                <div class="p-2 bg-turquoise text-center text-white">
+                    <h5><%= @diary.start_time.try(:strftime, "%Y") %></h5>
+                    <h4><%= @diary.start_time.try(:strftime, "%m / %d") %></h4>
+                </div>
+                <div class="m-auto text-darkblue">
+                    <h2><%= @diary.title %></h2>
+                </div>
             </div>
-            <div class="title">
-                <h2><%= @diary.title %></h2>
-            </div>
-        </div>
-        <div class="content">
             <p><%= @diary.content %></p>
         </div>
-    </div>
-    <div class="show-buttons">
-        <%= link_to '再編集', edit_diary_path(@diary.id), class: 'btn btn-info' %>
-        <%= link_to 'TOP', root_path, class: 'btn btn-primary' %>
-        <%= link_to '削除', @diary, method: :delete, class: 'btn btn-danger', data: { confirm: 'この日記を削除しますか？' } %>
-    </div>
+        <div class="m-3 text-center">
+            <%= link_to '再編集', edit_diary_path(@diary.id), class: 'btn btn-info' %>
+            <%= link_to 'TOP', root_path, class: 'btn btn-primary' %>
+            <%= link_to '削除', @diary, method: :delete, class: 'btn btn-danger', data: { confirm: 'この日記を削除しますか？' } %>
+        </div>
+    </main>
 </div>

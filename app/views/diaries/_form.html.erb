@@ -1,5 +1,5 @@
-<div class="form-group">
-    <div class="error-message">
+<div class="form-group m-0 px-3 py-0">
+    <div class="text-danger font-weight-bold">
         <% if @diary.errors.any? %>              
             <ul>
                 <% @diary.errors.full_messages.each do |message| %>
@@ -9,21 +9,21 @@
         <% end %>
     </div>
     <%= form_with(model: @diary, local: true) do |form| %>
-        <div class="row">
-            <div class="form date col-6 col-sm-4">
+        <div class="row w-100">
+            <div class="form-space col-6 col-sm-4">
                 <h6>| 日付 |</h6>
                 <%= form.date_field :start_time, class: 'form-control' %>
             </div>
-            <div class="form title col-sm-8">
+            <div class="form-space col-sm-8">
                 <h6>| タイトル |</h6>
                 <%= form.text_field :title, class: 'form-control' %>
             </div>
         </div>
-        <div class="form content">
+        <div class="form-space content">
             <h6>| 本文 |</h6>
             <%= form.rich_text_area :content, class: 'form-control' %>
         </div>
-        <div class="form-buttons">
+        <div class="text-center">
             <%= form.submit '完了', class: 'btn btn-success', data: { confirm: 'この内容で日記を作成します'} %>
             <%= link_to '戻る', diary, class: 'btn btn-primary', data: { confirm: 'ページを移動してよろしいですか？'} %>
         </div>
