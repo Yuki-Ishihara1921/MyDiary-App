@@ -2,8 +2,8 @@
     <span class="app-logo"><%= link_to 'MyDiary', root_path %></span>
     <% if @user %>
         <div class="ml-auto px-3 py-0 border-left border-dark bg-light text-center">
-            <h2><%= @user.name %></h2>
-            <p class="m-0"><%= link_to 'ログアウト', logout_path, method: :delete %></p>
+            <h3><%= @user.name %></h3>
+            <p class="m-0"><%= link_to 'ログアウト', logout_path, method: :delete, data: { confirm: "ログアウトしてもよろしいですか？" } %></p>
         </div>
     <% end %>
 </header>

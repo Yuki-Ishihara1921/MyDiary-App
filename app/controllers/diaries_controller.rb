@@ -1,6 +1,7 @@
 class DiariesController < ApplicationController
   before_action :set_current_user
   before_action :set_diary, only: [:show, :edit, :update, :destroy]
+  
   def index
     diaries = Diary.all
   end
@@ -17,7 +18,7 @@ class DiariesController < ApplicationController
     @diary.user_id = current_user.id
     respond_to do |format|
       if @diary.save
-        format.html {redirect_to @diary, notice: '日記ができました！'}
+        format.html {redirect_to @diary, notice: '日記を作成しました！'}
       else
         format.html {render :new}
       end

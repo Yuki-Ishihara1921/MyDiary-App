@@ -1,4 +1,4 @@
-<div class="form-group m-0 px-3 py-0">
+<div class="form__block px-4 py-2">
     <div class="text-danger font-weight-bold">
         <% if @diary.errors.any? %>              
             <ul>
@@ -24,8 +24,8 @@
             <%= form.rich_text_area :content, class: 'form-control' %>
         </div>
         <div class="text-center">
-            <%= form.submit '完了', class: 'btn btn-success', data: { confirm: 'この内容で日記を作成します'} %>
-            <%= link_to '戻る', diary, class: 'btn btn-primary', data: { confirm: 'ページを移動してよろしいですか？'} %>
+            <%= form.submit '完了', class: 'btn btn-success m-2', data: { confirm: 'この内容で日記を作成します'} %>
+            <%= link_to '戻る', diary, class: 'btn btn-primary m-2' %>
         </div>
     <% end %>
 </div>
