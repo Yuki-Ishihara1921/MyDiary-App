@@ -1,20 +1,24 @@
-<div class="auth-flame">
-    <div class="auth-forms">
-        <span class="app-logo">MyDiary</span>
-
-        <p><%= notice %></p>
-        <%= form_for(:session, url: login_path) do |form| %>
-
-            <%= form.text_field :name, class: 'form form-control', placeholder: 'ユーザー名' %>
-            <%= form.password_field :password, class: 'form form-control', placeholder: 'パスワード' %>
-            <%= form.label :remember_me, class: 'form' do %>
-                <%= form.check_box :remember_me %>
+<div class="auth__container">
+    <span class="logo">MyDiary</span>
+    <% if notice %>
+        <p class="text-danger"><%= notice %></p>
+    <% end %>
+    <div class="m-2">
+        <%= form_for(:session, url: signin_path) do |f| %>
+            <div class="d-flex">
+                <p><%= icon("person-circle", class: "me-2") %></p>
+                <%= f.text_field :name, class: 'form-control mb-3', placeholder: 'ユーザー名' %>
+            </div>
+            <div class="d-flex">
+                <p><%= icon("lock-fill", class: "me-2") %></p>
+                <%= f.password_field :password, class: 'form-control mb-3', placeholder: 'パスワード' %>
+            </div>
+            <%= f.label :remember_me, class: 'mb-3' do %>
+                <%= f.check_box :remember_me %>
                 <span>ログイン状態を保持</span>
             <% end %>
-            <br>
-            <%= form.submit "ログイン", class: "form btn btn-success" %>
+            <%= f.submit "ログイン", class: "btn btn-success mb-2" %>
         <% end %>
-
-        <p class="form"><%= link_to "ユーザー作成はこちら", signup_path %></p>
     </div>
+    <%= link_to "アカウント登録はこちら", signup_path %>
 </div>
