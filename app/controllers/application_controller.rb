@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
             current_user = @current_user
             @user = User.find(current_user.id)
         else
-            redirect_to login_path
+            redirect_to signin_path
             session[:user_id] = nil
             @current_user = nil
         end

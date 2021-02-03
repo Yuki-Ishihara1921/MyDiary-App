@@ -20,11 +20,12 @@
                 border: 1px solid #555;
                 border-radius: 10px;
                 font-size: 20px;
-            }
-            a:hover {
-                color: #fff;
-                background: blue;
                 text-decoration: none;
+                &:hover {
+                    color: #fff;
+                    background: blue;
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -69,7 +70,10 @@
     .has-events {
         a {
             font-weight: bold;
-            color: blue;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }

@@ -16,73 +16,75 @@
  */
 
 
-/* ---------- common ---------- */
+/* ---------- App ---------- */
+
 @charset "UTF-8";
 
-html {
-    height: 100%;
-}
-body {
-    height: 100%;
-}
 .btn {
-    width: 125px;
+    min-width: 125px;
 }
-
-/* ---------- Header ---------- */
-header {
-    display: flex !important;
-    padding-left: 20px;
-    border-bottom: 1px solid #555;
-    background: whitesmoke;
-}
-.app-logo {
-    margin: auto auto auto 0;
+.logo {
     color: #0000AA;
-    font-size: 40px;
     font-family: serif;
+    font-size: 40px;
     font-weight: bold;
-    :hover {
+    text-decoration: none;
+    a {
         text-decoration: none;
     }
 }
-
-/* ---------- Show page ---------- */
-.show__contents {
-    max-width: 700px;
-    margin: 0 auto;
-    background: aliceblue;
-    box-shadow: 0px 0px 5px 0px #555;
-    .s__contents-title {
-        display: flex;
-        padding: 10px 0;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
-        .bg-turquoise {
-            background: turquoise;
-        }
-        .text-darkblue {
-            color: darkblue;
-        }
-    }
-}
-/* ------------------------------ */
-
-/* ---------- New/Edit page ---------- */
-.text-header {
+.headline {
     padding: 5px;
     background: aquamarine;
     text-align: center;
     font-weight: bold !important;
     letter-spacing: 5px;
 }
-.form__block {
+
+/* ---------- Page Authentication ---------- */
+
+.auth__container {
+    max-width: 350px;
+    margin: 100px auto;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0px 0px 5px 0px #555;
+    background: floralwhite;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    display: flex !important;
+    padding-left: 20px;
+    border-bottom: 1px solid #555;
+    background: whitesmoke;
+}
+
+/* ---------- Show page ---------- */
+
+.showPage {
     max-width: 700px;
     margin: 0 auto;
-    background: honeydew;
+    padding: 1.5rem;
+    background: aliceblue;
     box-shadow: 0px 0px 5px 0px #555;
+    .showPage_headline {
+        display: flex;
+        padding: 10px 0;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+    }
 }
-.form-space {
-    margin: 4px 0;
+
+/* ---------- New/Edit Form ---------- */
+
+.form__container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 5px 20px;
+    box-shadow: 0px 0px 5px 0px #555;
+    background: honeydew;
 }
-/* ------------------------------ */
+
+/* ------------------------------------------------------------ */

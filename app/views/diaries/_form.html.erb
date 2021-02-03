@@ -1,31 +1,33 @@
-<div class="form__block px-4 py-2">
-    <div class="text-danger font-weight-bold">
-        <% if @diary.errors.any? %>              
-            <ul>
-                <% @diary.errors.full_messages.each do |message| %>
-                    <li><%= message %></li>
-                <% end %>
-            </ul>
+<div class="mx-4">
+    <div class="form__container">
+        <div class="text-danger font-weight-bold">
+            <% if @diary.errors.any? %>              
+                <ul>
+                    <% @diary.errors.full_messages.each do |message| %>
+                        <li><%= message %></li>
+                    <% end %>
+                </ul>
+            <% end %>
+        </div>
+        <%= form_with(model: @diary, local: true) do |form| %>
+            <div class="row">
+                <div class="col-sm-4 col-6 my-1">
+                    <h6>| 日付 | * </h6>
+                    <%= form.date_field :start_time, class: 'form-control' %>
+                </div>
+                <div class="col-sm-8 my-1">
+                    <h6>| タイトル | * </h6>
+                    <%= form.text_field :title, class: 'form-control' %>
+                </div>
+            </div>
+            <div class="my-1">
+                <h6>| 本文 |</h6>
+                <%= form.rich_text_area :content, class: 'form-control' %>
+            </div>
+            <div class="text-center">
+                <%= form.submit '完了', class: 'btn btn-success mx-2 my-1', data: { confirm: 'この内容で日記を作成します'} %>
+                <%= link_to '戻る', diary, class: 'btn btn-secondary mx-2 my-1' %>
+            </div>
         <% end %>
     </div>
-    <%= form_with(model: @diary, local: true) do |form| %>
-        <div class="row w-100">
-            <div class="form-space col-6 col-sm-4">
-                <h6>| 日付 |</h6>
-                <%= form.date_field :start_time, class: 'form-control' %>
-            </div>
-            <div class="form-space col-sm-8">
-                <h6>| タイトル |</h6>
-                <%= form.text_field :title, class: 'form-control' %>
-            </div>
-        </div>
-        <div class="form-space content">
-            <h6>| 本文 |</h6>
-            <%= form.rich_text_area :content, class: 'form-control' %>
-        </div>
-        <div class="text-center">
-            <%= form.submit '完了', class: 'btn btn-success m-2', data: { confirm: 'この内容で日記を作成します'} %>
-            <%= link_to '戻る', diary, class: 'btn btn-primary m-2' %>
-        </div>
-    <% end %>
 </div>

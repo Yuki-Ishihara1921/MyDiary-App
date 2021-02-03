@@ -1,7 +1,5 @@
-<%= render 'header' %>
-<%= render 'notice' %>
-<main>
-    <h3 class="text-header">日記リスト</h3>
+<section>
+    <h3 class="headline">日記リスト</h3>
     <%= month_calendar events: @user.diaries do |date, diaries| %>
         <%= date.day %>
         <% diaries.each do |diary| %>
@@ -13,4 +11,4 @@
     <div class="pt-3 text-center">
         <%= link_to '日記を作る', new_diary_path, class: 'btn btn-info' %>
     </div>
-</main>
+</section>

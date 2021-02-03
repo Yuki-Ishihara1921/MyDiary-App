@@ -11,6 +11,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <% if logged_in? %>
+      <%= render 'header' %>
+      <% if notice %>
+        <%= render 'notice' %>
+      <% end %>
+    <% end %>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

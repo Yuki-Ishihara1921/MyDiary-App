@@ -6,9 +6,6 @@ class DiariesController < ApplicationController
     diaries = Diary.all
   end
 
-  def show
-  end
-
   def new
     @diary = Diary.new
   end
@@ -23,9 +20,6 @@ class DiariesController < ApplicationController
         format.html {render :new}
       end
     end
-  end
-
-  def edit
   end
 
   def update
@@ -46,12 +40,12 @@ class DiariesController < ApplicationController
   end
 
   private
-  def set_diary
-    @diary = Diary.find(params[:id])
-  end
+    def set_diary
+      @diary = Diary.find(params[:id])
+    end
 
-  def diary_params
-    params.require(:diary).permit(:start_time, :title, :content, :user_id)
-  end
+    def diary_params
+      params.require(:diary).permit(:start_time, :title, :content, :user_id)
+    end
 
 end
