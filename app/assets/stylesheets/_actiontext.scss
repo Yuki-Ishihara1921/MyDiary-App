@@ -10,9 +10,18 @@
 // images in galleries will be squished by the max-width: 33%; rule.
 
 trix-editor {
+  .attachment {
+    width: 250px;
+    text-align: center;
+  }
   min-height: 25em;
   max-height: 25em;
   overflow-y: auto;
+  & figure {
+    & img {
+      width: 250px;
+    }
+  }
 }
 .trix-content {
   .attachment-gallery {
@@ -20,7 +29,7 @@ trix-editor {
     > .attachment {
       flex: 1 0 33%;
       padding: 0 0.5em;
-      max-width: 33%;
+      width: 250px;
     }
 
     &.attachment-gallery--2,
@@ -32,11 +41,14 @@ trix-editor {
       }
     }
   }
+  & img {
+    width: 250px;
+  }
 
   action-text-attachment {
     .attachment {
+      width: 250px;
       padding: 0 !important;
-      max-width: 100% !important;
     }
   }
 }

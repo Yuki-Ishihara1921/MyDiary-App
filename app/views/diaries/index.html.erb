@@ -1,5 +1,5 @@
 <section>
-    <h3 class="headline">日記リスト</h3>
+    <h3 class="headline">日記一覧</h3>
     <%= month_calendar events: @user.diaries do |date, diaries| %>
         <%= date.day %>
         <% diaries.each do |diary| %>
