@@ -4,7 +4,7 @@
         <p class="text-danger"><%= notice %></p>
     <% end %>
     <div class="m-2">
-        <%= form_for(@user, url: signup_path ) do |f| %>
+        <%= form_with model: @user, url: signup_path, local: true do |f| %>
             <div class="d-flex">
                 <p><%= icon("person-circle", class: "me-2") %></p>
                 <%= f.text_field :name, class: 'form-control mb-3', placeholder: 'ユーザー名' %>
